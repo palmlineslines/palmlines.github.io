@@ -3,57 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mike Sacchetti</title>
+  <title>MIKE SACCHETTI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <style>
+    html { font-size: 16px; }
     body {
-      font-family: sans-serif;
-      background-color: #f7f7f7;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #f5f5f3;
+      color: #28282a;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 60px 20px 40px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
       text-align: center;
-      padding: 60px 20px;
-      color: #333;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2em;
-      color: #666;
+
+    h1, p { margin: 0; }
+    p { font-size: 1.2em; margin-bottom: 24px; }
+
+    .subtitle {
+      font-size: 1.6em;
       margin-bottom: 30px;
     }
+
     .links a {
       display: inline-block;
-      margin: 10px;
+      margin: 12px;
       padding: 12px 24px;
-      background: #222;
-      color: white;
+      background: #28282a;
+      color: #fff;
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.2s;
     }
-    .links a:hover {
-      background: #444;
+
+    .links a:hover { background: #444; }
+
+    .header-img {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto 30px;
     }
-    img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
+
+    .bio {
+      font-size: 1.2em;
+      font-style: italic;
+      max-width: 760px;
+      margin: 20px auto 30px;
+    }
+
+    .embed-container {
+      margin: 30px auto 20px;
+      max-width: 900px;
+      width: 100%;
+      padding: 0;
+    }
+
+    iframe {
+      border-radius: 12px;
+      margin: 10px 0;
+      width: 100%;
+      height: 380px;
+      display: block;
+    }
+
+    .image-after-embed {
+      margin: 30px auto;
+      max-width: 1080px;
+      width: 100%;
+    }
+
+    .licensing {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+
+    .copyright {
+      font-size: 1em;
+      margin-top: 50px;
+      padding: 30px 0 10px;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .subtitle { font-size: 1.4em; }
+      .bio {
+        font-size: 1em;
+        max-width: 90%;
+        padding: 0 15px;
+        line-height: 1.5;
+        text-align: center; /* Center text on mobile */
+        /* Uncomment for hyphenation if needed */
+        /* hyphens: auto; */
+      }
+      .links a { padding: 12px 24px; }
+      .embed-container { margin: 20px auto 10px; }
+      iframe {
+        height: 320px;
+        margin: 4px 0; /* Add 8px gap between embeds */
+      }
+      .image-after-embed { margin: 20px auto; }
+      .licensing { margin: 10px 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Optional: Uncomment and add your photo -->
-  <!-- <img src="your-photo.jpg" alt="Mike Sacchetti"> -->
+  <img src="https://i.imgur.com/xDV2Ovc.png" alt="PALM LINES" class="header-img" loading="lazy">
 
-  <h1>Mike Sacchetti</h1>
-  <p>Creative professional & freelancer. Currently open to new opportunities.</p>
+  <p class="subtitle">
+    Producer, Songwriter, & Musician.<br>
+  </p>
 
   <div class="links">
-    <a href="mailto:you@mikesacchetti.com">Email Me</a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    <a href="https://yourportfolio.com" target="_blank">Portfolio</a>
+    <a href="mailto:palmlineslines@gmail.com">EMAIL ME</a>
+    <a href="https://www.instagram.com/palmlines">INSTAGRAM</a>
   </div>
+
+  <p class="bio">
+    PALM LINES (Mike Sacchetti) is a producer, songwriter, and multi-instrumentalist represented by sync agency <a href="https://www.lowprofilenyc.com">Low Profile</a>. With millions of independent streams across hip-hop, indie rock, and pop projects, PALM LINES work has been licensed for film and commercial use by brands including Linktree, supported by SiriusXM and independent radio stations worldwide, and has gained national attention through coverage in MTV and Alternative Press.
+  </p>
+
+  <div class="embed-container">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=lbz6IESKImJhtmXN&controls=0&list=PLYaatkA5M00xekQtPmxUr_XqbsCt-MCCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+
+    <br>
+
+    <p class="licensing">
+      For licensing inquiries, please contact:<br>
+      <a href="mailto:yo@lowprofilenyc.com">yo@lowprofilenyc.com</a>
+    </p>
+  </div>
+
+  <p class="copyright">© <span id="year"></span>. All rights reserved.</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
